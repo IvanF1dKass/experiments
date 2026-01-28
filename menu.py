@@ -54,11 +54,9 @@ screen = pygame.display.set_mode((1200, 700))
 clock = pygame.time.Clock()
 
 state = 'menu'
-dog_surf = pygame.image.load('img/rcat.jpg')
 
-h_image = 200
-w_image = h_image * dog_surf.get_width() / dog_surf.get_height()
-dog_surf = pygame.transform.scale(dog_surf, (w_image, h_image))
+
+
 while True:
     clock.tick(FPS)
     screen.fill(BEIGE_FON)
@@ -83,7 +81,7 @@ while True:
         screen.blit(text8, (175 + 400, 150))
         text9 = font.render('9', True, DARK_ORANGE_4)
         screen.blit(text9, (175 + 800, 150))
-        screen.blit(dog_surf, (0, 100))
+        
     elif state == 'menu_7':
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
@@ -132,8 +130,7 @@ while True:
         screen.blit(text_experement2, (500, 150))
         text_experement3 = font1.render('- Рассеивающая линза', True, BLACK)
         screen.blit(text_experement3, (500, 200))
-        text_experement4 = font1.render('- Гидравлическая машина', True, BLACK)
-        screen.blit(text_experement4, (500, 250))
+        
         
     elif state == 'menu_9':
         for event in pygame.event.get():

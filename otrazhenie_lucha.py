@@ -65,4 +65,3 @@ while True:
     screen.blit(text, (100, 600))
 
     pygame.display.update()
-    font
